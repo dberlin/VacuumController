@@ -152,13 +152,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Downloads\AdvancedHMIBetaV398t\AdvancedHMIControls\AdvancedHMIControls.vbproj">
-      <Project>{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}</Project>
+    <ProjectReference Include="..\..\..\..\..\Downloads\AdvancedHMIControls\AdvancedHMIControls.vbproj">
+      <Project>{928f9169-93d6-4e5f-8130-c8b1f4d3cc6e}</Project>
       <Name>AdvancedHMIControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Downloads\AdvancedHMIBetaV398t\AdvancedHMIDrivers\AdvancedHMIDrivers.vbproj">
-      <Project>{1C35364C-105A-4537-9CA1-0FB0DC656944}</Project>
+    <ProjectReference Include="..\..\..\..\..\Downloads\AdvancedHMIDrivers\AdvancedHMIDrivers.vbproj">
+      <Project>{1c35364c-105a-4537-9ca1-0fb0dc656944}</Project>
       <Name>AdvancedHMIDrivers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Downloads\AdvancedHMI\AdvancedHMI.vbproj">
+      <Project>{13a180b0-1183-4cb7-ac14-bf98320a30e4}</Project>
+      <Name>AdvancedHMI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
