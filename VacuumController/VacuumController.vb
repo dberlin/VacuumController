@@ -36,20 +36,30 @@
 
     End Sub
 
-    Private Sub PIDSetpoint_GotFocus(sender As Object, e As EventArgs) Handles PIDSetpoint.GotFocus
+    Private Sub PIDSetpoint_GotFocus(sender As Object, e As EventArgs) Handles PIDSetpointVC75.GotFocus
 
     End Sub
 
-    Private Sub PIDSetpoint_TextChanged(sender As Object, e As EventArgs) Handles PIDSetpoint.TextChanged
+    Private Sub PIDSetpoint_TextChanged(sender As Object, e As EventArgs) Handles PIDSetpointVC75.TextChanged
 
     End Sub
 
-    Private Sub PIDSetpoint_ValueChanged(sender As Object, e As EventArgs) Handles PIDSetpoint.ValueChanged
-        UpButton.ValueToWrite = PIDSetpoint.Value + 10
-        DownButton.ValueToWrite = PIDSetpoint.Value - 10
+    Private Sub PIDSetpoint_ValueChanged(sender As Object, e As EventArgs) Handles PIDSetpointVC75.ValueChanged
+        UpButton.ValueToWrite = PIDSetpointVC75.Value + 5
+        DownButton.ValueToWrite = PIDSetpointVC75.Value - 5
     End Sub
 
-    Private Sub DigitalPanelMeter1_Click(sender As Object, e As EventArgs) Handles DigitalPanelMeter1.Click
+    Private Sub DigitalPanelMeter1_Click(sender As Object, e As EventArgs) Handles OutputPowerVC75.Click
+
+    End Sub
+
+    Private Sub ModBusToSV65_ConnectionEstablished(sender As Object, e As EventArgs) Handles ModBusToSV65.ConnectionEstablished
+        'Unlock drive
+        ModBusToSV65.Write(40049, 0)
+        'ModBusToSV65.Write(40002, 8)
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
 
     End Sub
 End Class
